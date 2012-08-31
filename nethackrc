@@ -1,0 +1,48 @@
+#
+# System-wide NetHack configuration file for tty-based NetHack.
+#
+
+OPTIONS=windowtype:tty,toptenwin,hilite_pet,lit_corridor,DECgraphics
+OPTIONS=fixinv,safe_pet,sortpack,tombstone,color,showexp,showscore
+OPTIONS=time
+OPTIONS=verbose,news,fruit:potato,boulder:8
+OPTIONS=dogname:Slinky
+OPTIONS=catname:Rex
+OPTIONS=pickup_types:$
+
+# Enable this if you want to see your inventory sorted in alphabetical
+# order by item instead of by index letter:
+# OPTIONS=sortloot:full
+# or if you just want containers sorted:
+# OPTIONS=sortloot:loot
+
+OPTIONS=statuscolors
+# HP
+STATUSCOLOR=hp%100=green,hp%66=yellow,hp%50=orange
+STATUSCOLOR=hp%33=red&bold,hp%15:red&inverse,hp%0:red&inverse&blink
+# Pw
+STATUSCOLOR=pw%100=green,pw%66=yellow,pw%50:orange,pw%33=red&bold
+# Carry
+STATUSCOLOR=burdened:yellow,stressed:orange,strained:red&bold
+STATUSCOLOR=overtaxed:red&inverse,overloaded:red&inverse&blink
+# Hunger
+STATUSCOLOR=satiated:yellow,hungry:orange,weak:red&bold
+STATUSCOLOR=fainting:red&inverse,fainted:red&inverse&blink
+# Mental
+STATUSCOLOR=hallu:yellow,conf:orange,stun:red&bold
+# Health
+STATUSCOLOR=ill:red&inverse,foodpois:red&inverse,slime:red&inverse
+# Other
+STATUSCOLOR=held:red&inverse,blind:red&inverse
+
+#
+# Some sane menucolor defaults
+#
+
+OPTIONS=menucolors
+MENUCOLOR=" blessed "=green
+MENUCOLOR=" holy "=green
+MENUCOLOR=" uncursed "=yellow
+MENUCOLOR=" cursed "=red
+MENUCOLOR=" unholy "=red
+MENUCOLOR=" cursed .* (being worn)"=orange&underline
