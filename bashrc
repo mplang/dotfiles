@@ -10,4 +10,4 @@ PS1='[\u@\h \W]\$ '
 
 complete -cf sudo
 
-export EDITOR="/usr/bin/nano"
+export EDITOR="/usr/bin/vim"
