@@ -3,3 +3,5 @@
 [user]
 	name = Michael P. Lang
 	email = michael@mplang.net
+[core]
+	editor = vimdiff
