@@ -12,6 +12,7 @@ set autoread
 
 set ruler
 set cmdheight=2
+set showcmd
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set ignorecase
@@ -38,24 +39,24 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 set laststatus=2
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-
 set number
 
+"set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction
+set statusline=   " clear the statusline for when vimrc is reloaded
+set statusline+=%-3.3n\                      " buffer number
+set statusline+=%f\                          " file name
+set statusline+=%h%m%r%w                     " flags
+set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
+set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
+set statusline+=%{&fileformat}]              " file format
+set statusline+=%=                           " right align
+set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
+set statusline+=%b,0x%-8B\                   " current char
+set statusline+=%-14.(%c,%l/%L%)\ %<%P        " offset
 
-" Returns true if paste mode is enabled
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    en
-    return ''
-endfunction
+"Markdown to HTML
+nmap <leader>md :%!markdown <cr>
 
 autocmd BufNewFile,BufRead *.cpp set formatprg=astyle\ -A1fpUxdjk1
 autocmd BufNewFile,BufRead *.java set formatprg=astyle\ -A1fpUxdjk1
