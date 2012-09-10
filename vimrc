@@ -62,4 +62,4 @@ autocmd BufNewFile,BufRead *.cpp set formatprg=astyle\ -A1fpUxdjk1
 autocmd BufNewFile,BufRead *.java set formatprg=astyle\ -A1fpUxdjk1
 
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/dotfiles/vim/bundle/closetag/plugin/closetag.vim
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/dotfiles/vim/bundle/closetag.vim/plugin/closetag.vim
