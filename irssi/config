@@ -188,9 +188,14 @@ statusbar = {
     topic_empty = " Irssi v$J - http://www.irssi.org";
 
     # all of these treated specially, they're only displayed when needed
-    lag = "{sb Lag: $0-}";
+    #lag = "{sb Lag: $0-}";
+    #act = "{sb Act: $0-}";
+    #more = "-- more --";
+
+    # Solarized
+    lag = "{sb Lag: %m$0-%n}";
     act = "{sb Act: $0-}";
-    more = "-- more --";
+    more = "%k%3-- more --%n";
   };
 
   # there's two type of statusbars. root statusbars are either at the top
@@ -287,6 +292,10 @@ settings = {
   };
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = {
+    # Solarized
+    theme = "solarized-universal";
+    hilight_color = "= %R";
+
     autocreate_own_query = "no";
     autocreate_query_level = "DCCMSGS";
     use_status_window = "no";
@@ -299,9 +308,20 @@ settings = {
     awl_block = "10";
     awl_sbar_maxlength = "yes";
     awl_maxlines = "5";
-    awl_display_key = "$N$H$C$S";
-    awl_display_nokey = "$N$H$C$S";
+    #awl_display_key = "$N$H$C$S";
+    #awl_display_nokey = "$N$H$C$S";
+
+    ### For Solarized adv_windowlist.pl script
+    awl_display_key_active = "%k%2[$Q=$N:$C]%n";
+    awl_display_nokey_active = "%k%2[$N:$C]%n";
+    awl_display_key = "[$Q:$H$C$S]";
+    awl_display_nokey = "[$N:$H$C$S]";
+
+    ### For Solarized trackbar.pl script
+    trackbar_style = "%B";
   };
 };
-hilights = ( { text = "mplang"; nick = "yes"; word = "yes"; } );
+hilights = (
+  { text = "mplang"; color = "%M"; nick = "yes"; word = "yes"; }
+);
 ignores = ( { mask = "#archlinux"; level = "JOINS PARTS QUITS"; } );
