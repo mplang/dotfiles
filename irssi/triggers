@@ -1,0 +1,2 @@
+#Triggers file version 1.0
+-publics -channels '#CCSUCompSci' -command 'exec echo -e "^tw() ^fg(khaki)$C ($N)\n ^fg(khaki)$N:^fg() $M" > $HOME/.irssi_pipe' 
