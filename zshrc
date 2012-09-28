@@ -34,7 +34,8 @@ plugins=(git archlinux)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/michael/.cabal/bin:/home/michael/.xmonad/bin:/opt/android-sdk/tools
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/michael/.cabal/bin:/home/michael/.xmonad/bin:/opt/android-sdk/tools:~/bin
+export GOPATH=~/go
 export EDITOR="vim"
 export TERM=xterm-256color
 eval `dircolors /home/michael/.dir_colors`

@@ -1,0 +1,1 @@
+/home/michael/dotfiles/irssi/scripts/trigger.pl
