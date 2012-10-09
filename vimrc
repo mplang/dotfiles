@@ -64,3 +64,10 @@ autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/dotfiles/vim/bundle/closetag/plugin/closetag.vim
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
 autocmd! BufNewFile,BufRead *.ino setlocal ft=arduino
+
+au BufRead,BufNewFile *.scala set filetype=scala
+
+au BufNewFile,BufRead *conkyrc set filetype=conkyrc
+au BufNewFile,BufRead conky.conf set filetype=conkyrc
+
+au BufNewFile,BufRead PKGBUILD set filetype=PKGBUILD
