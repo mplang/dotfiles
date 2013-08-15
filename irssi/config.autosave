@@ -99,7 +99,7 @@ chatnets = {
   freenode = {
     type = "IRC";
     nick = "mplang";
-    autosendcmd = "/^msg nickserv IDENTIFY FN_mpl430775_";
+    autosendcmd = "/^msg nickserv IDENTIFY FN_mpl430775_;wait 2000";
   };
 };
 
